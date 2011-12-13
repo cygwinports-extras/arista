@@ -1,0 +1,16 @@
+inherit distutils
+
+DESCRIPTION="GNOME video transcoder"
+HOMEPAGE="http://www.transcoder.org/"
+SRC_URI="http://programmer-art.org/media/releases/arista-transcoder/${P}.tar.gz"
+PATCH_URI="0.9.7-no-hal.patch"
+
+src_install() {
+	cd ${B}
+	distutils_install
+	# not compatible with nautilus-3
+	rm -fr ${D}/usr/share/nautilus-python/
+	# huh?
+	rm -fr ${D}/usr/share/locale/templates/
+}
+DOCS="README.md"

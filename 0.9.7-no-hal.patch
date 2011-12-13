@@ -1,0 +1,11 @@
+--- origsrc/arista-0.9.7/arista-gtk	2011-06-20 09:10:53.000000000 -0500
++++ src/arista-0.9.7/arista-gtk	2011-12-05 23:10:21.693037100 -0600
+@@ -73,7 +73,7 @@ locale.setlocale(locale.LC_ALL, '')
+ 
+ CONFIG_PATH = "/apps/arista"
+ 
+-DEFAULT_CHECK_INPUTS = True
++DEFAULT_CHECK_INPUTS = False
+ DEFAULT_SHOW_TOOLBAR = True
+ DEFAULT_SHOW_PREVIEW = True
+ DEFAULT_PREVIEW_FPS = 10
