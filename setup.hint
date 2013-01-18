@@ -1,6 +1,0 @@
-category: Video
-requires: python python-cairo python-dbus python-gconf2 python-gobject python-gst0.10 python-gtk2.0 python-pynotify python-webkit gstreamer0.10-plugins-faac gstreamer0.10-plugins-ffmpeg gstreamer0.10-plugins-good gstreamer0.10-plugins-lame gstreamer0.10-plugins-mpeg2enc gstreamer0.10-plugins-theora gstreamer0.10-plugins-twolame gstreamer0.10-plugins-vorbis gstreamer0.10-plugins-vp8 gstreamer0.10-plugins-x264 gstreamer0.10-plugins-xvid
-sdesc: "GNOME video transcoder"
-ldesc: "A simple preset-based transcoder for the GNOME Desktop and a 
-small script for terminal-based transcoding. Settings are chosen based 
-on output device and quality preset."

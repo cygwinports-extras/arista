@@ -1,0 +1,25 @@
+inherit distutils
+
+NAME="arista"
+VERSION=0.9.7
+RELEASE=2
+CATEGORY="Video"
+SUMMARY="GNOME video transcoder"
+DESCRIPTION="A simple preset-based transcoder for the GNOME Desktop and a small
+script for terminal-based transcoding. Settings are chosen based on output
+device and quality preset."
+HOMEPAGE="http://www.transcoder.org/"
+SRC_URI="http://programmer-art.org/media/releases/arista-transcoder/${P}.tar.gz"
+PATCH_URI="0.9.7-no-hal.patch"
+
+REQUIRES="gstreamer0.10-plugins-faac gstreamer0.10-plugins-ffmpeg gstreamer0.10-plugins-good gstreamer0.10-plugins-lame gstreamer0.10-plugins-mpeg2enc gstreamer0.10-plugins-theora gstreamer0.10-plugins-twolame gstreamer0.10-plugins-vorbis gstreamer0.10-plugins-vp8 gstreamer0.10-plugins-x264 gstreamer0.10-plugins-xvid"
+
+src_install() {
+	cd ${B}
+	distutils_install
+	# not compatible with nautilus-3
+	rm -fr ${D}/usr/share/nautilus-python/
+	# huh?
+	rm -fr ${D}/usr/share/locale/templates/
+}
+DOCS="README.md"
